@@ -26,10 +26,10 @@ window.document.addEventListener('mouseup', (e) => {
 document.querySelector('body').addEventListener('mousemove', (e) => {
     if(!drag) return
     console.log(e.pageY)
-    if(e.pageY > 600) return
-    if(e.pageY < 5)  content.style.borderRadius = '0px'
+    if(e.pageY > 600 + 30) return
+    if(e.pageY < 5 + 32)  content.style.borderRadius = '0px'
     else content.style.borderRadius = '2rem 2rem 0 0'
     
-    content.style.height = `${window.innerHeight - e.pageY}px`
+    content.style.height = `${window.innerHeight - e.pageY + 32}px`
     
 })
